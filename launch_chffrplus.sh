@@ -1,8 +1,12 @@
 #!/usr/bin/bash
 
+echo "$PASSIVE" > PASSIVE_STATUS_BEFORE
+
 if [ -z "$PASSIVE" ]; then
   export PASSIVE="1"
 fi
+
+echo "$PASSIVE" > PASSIVE_STATUS
 
 function launch {
   # apply update
